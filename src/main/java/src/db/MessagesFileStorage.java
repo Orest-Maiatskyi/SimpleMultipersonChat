@@ -20,7 +20,7 @@ public class MessagesFileStorage {
 
     public static File storageFile;
     public static Key serverKey;
-    public static boolean backup = Boolean.parseBoolean(Config.getValue("massagesStorageBackupFile.backup"));
+    public static boolean backup = Boolean.parseBoolean(Config.getValue("messagesStorageBackupFile.backup"));
 
     public static class BackupThread implements Runnable {
 
@@ -29,20 +29,20 @@ public class MessagesFileStorage {
             try {
                 while (backup) {
                     backup();
-                    Thread.sleep(Integer.parseInt(Config.getValue("massagesStorageBackupFile.backupFrequency")));
+                    Thread.sleep(Integer.parseInt(Config.getValue("messagesStorageBackupFile.backupFrequency")));
                 }
             } catch (InterruptedException e) { throw new RuntimeException(e); }
         }
     }
 
     public static void backup() {
-        File backupDir = new File(Config.getValue("massagesStorageBackupFile.dir"));
+        File backupDir = new File(Config.getValue("messagesStorageBackupFile.dir"));
         if (backupDir.mkdir())
-            System.out.println("Messages backup dir create at: " + Config.getValue("massagesStorageBackupFile.dir"));
+            System.out.println("Messages backup dir create at: " + Config.getValue("messagesStorageBackupFile.dir"));
 
         DateTimeFormatter timeStampPattern = DateTimeFormatter.ofPattern("yyyy-MM-dd_hh-mm-ss");
 
-        File backupFile = new File(Config.getValue("massagesStorageBackupFile.dir") +
+        File backupFile = new File(Config.getValue("messagesStorageBackupFile.dir") +
                 timeStampPattern.format(LocalDateTime.now()) + ".txt");
         try {
             if (backupFile.createNewFile()) {
@@ -54,14 +54,14 @@ public class MessagesFileStorage {
 
     public static void open() {
         if (storageFile == null) {
-            storageFile = new File(Config.getValue("massagesStorageFile.fullPath"));
+            storageFile = new File(Config.getValue("messagesStorageFile.fullPath"));
             if (!storageFile.exists()) {
-                File storageDir = new File(Config.getValue("massagesStorageFile.dir"));
+                File storageDir = new File(Config.getValue("messagesStorageFile.dir"));
                 if (storageDir.mkdir())
-                    System.out.println("Messages storage dir create at: " + Config.getValue("massagesStorageFile.dir"));
+                    System.out.println("Messages storage dir create at: " + Config.getValue("messagesStorageFile.dir"));
                 try {
                     if (storageFile.createNewFile())
-                        System.out.println("Messages storage file create at: " + Config.getValue("massagesStorageFile.fullPath"));
+                        System.out.println("Messages storage file create at: " + Config.getValue("messagesStorageFile.fullPath"));
                 }
                 catch (IOException e) { throw new RuntimeException(e); }
             }
