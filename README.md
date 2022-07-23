@@ -58,7 +58,7 @@ The server contains a config file with all server settings.
 | messagesStorageBackupFile.dir | ./backup/ | Backup files dir. |
 
 ### Launch
-1. Create a java project, then replace the src folder with the one provided by this project.
+1. Create a javaFx project, then replace the src folder with the one provided by this project.
 2. Download and connect SQLITE JDBC, you can download it [here](https://github.com/xerial/sqlite-jdbc/releases).
 3. Download and connect the JAVAFX SDK, you can download it [here](https://gluonhq.com/products/javafx/). If you don't know how to connect JAVAFX SDK, here a [helpful video](https://youtu.be/9XJicRt_FaI?t=494).
 4. If you want to start a server, run src.Server.java.
