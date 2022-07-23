@@ -47,14 +47,14 @@ public class Config {
                     properties.setProperty("userDB.fullPath",
                             properties.getProperty("userDB.dir") + properties.getProperty("userDB.name"));
 
-                    properties.setProperty("massagesStorageFile.dir", "./");
-                    properties.setProperty("massagesStorageFile.name", "messages.txt");
-                    properties.setProperty("massagesStorageFile.fullPath",
-                            properties.getProperty("massagesStorageFile.dir") + properties.getProperty("massagesStorageFile.name"));
+                    properties.setProperty("messagesStorageFile.dir", "./");
+                    properties.setProperty("messagesStorageFile.name", "messages.txt");
+                    properties.setProperty("messagesStorageFile.fullPath",
+                            properties.getProperty("messagesStorageFile.dir") + properties.getProperty("messagesStorageFile.name"));
 
-                    properties.setProperty("massagesStorageBackupFile.backup", "true");
-                    properties.setProperty("massagesStorageBackupFile.backupFrequency", "1800000");
-                    properties.setProperty("massagesStorageBackupFile.dir", "./backup/");
+                    properties.setProperty("messagesStorageBackupFile.backup", "true");
+                    properties.setProperty("messagesStorageBackupFile.backupFrequency", "1800000");
+                    properties.setProperty("messagesStorageBackupFile.dir", "./backup/");
 
                     properties.store(fileOutputStream, null);
                 }
