@@ -58,10 +58,10 @@ The server contains a config file with all server settings.
 | messagesStorageBackupFile.dir | ./backup/ | Backup files dir. |
 
 ### Launch
-First create a java project, then replace the src folder with the one provided by this project.
-Download and connect SQLITE JDBC, you can download it here.
-Next, download and connect the JAVAFX SDK, you can download it here. If you don't know how to connect JAVAFX SDK, here a helpful video.
-If you want to start a server, run src.Server.java.
-If you want to start a desktop client, run src.Client.java.
+1.First create a java project, then replace the src folder with the one provided by this project.
+2.Download and connect SQLITE JDBC, you can download it here.
+3.Download and connect the JAVAFX SDK, you can download it here. If you don't know how to connect JAVAFX SDK, here a helpful video.
+4.If you want to start a server, run src.Server.java.
+5.If you want to start a desktop client, run src.Client.java.
 
 > Don't forget, if you want to specify the path to create the config file, specify the argument: "-config-path newPath" when starting the server.
