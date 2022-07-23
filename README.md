@@ -20,6 +20,7 @@ The process of communication between the client and the server is as follows:
 5. Client encrypts server passowrd with server public key and sends it.
 6. Server decrypts password and checks if it's correct.
 7. If all the preceding points were successful, server will assume that the connection is secure.
+8. From now on, all messages between the server and the client will be encrypted using each other's public keys.
 
 > Without establishing a secure connection, the server will not process requests containing personal data.
 
