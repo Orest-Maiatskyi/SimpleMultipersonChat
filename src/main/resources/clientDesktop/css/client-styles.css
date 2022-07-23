@@ -1,0 +1,23 @@
+
+* {
+    -fx-font-family: Calibri;
+    -fx-font-size: 14px;
+    -fx-font-color: #333;
+}
+
+#sendMessageButton {
+    -fx-background-color: rgba(0, 0, 0, 0.0);
+    -fx-background-image: url("../img/send_icon.png");
+    -fx-content-display: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 25 25;
+}
+
+#sendMessageButton:hover {
+    -fx-background-color: #ededed;
+}
+
+ScrollPane {
+    -fx-fit-to-height: false;
+    -fx-fit-to-width: true;
+}
